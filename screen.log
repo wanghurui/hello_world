@@ -1,0 +1,2545 @@
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ ls
+500D_111.sym                       electronic_level.o   lib_a-memset.o             reboot.d
+af_patterns.d                      entry.d              lib_a-setjmp.o             reboot.o
+af_patterns.o                      entry.o              location.map               screenlog.0
+atoi.o                             errno_location.o     lv-img-engio.d             screenshot.d
+atol.o                             errno.o              lv-img-engio.o             screenshot.o
+audio-ak.d                         exmem.d              lvinfo.d                   shoot.d
+audio-ak.o                         exmem.o              lvinfo.o                   shoot.o
+audio.c.500d_under_construction.c  falsecolor.d         [0m[01;32mmagiclantern[0m               state-object.d
+[01;32mautoexec[0m                           falsecolor.o         [01;32mmagiclantern.bin[0m           state-object.o
+[01;32mautoexec.bin[0m                       features.h           magiclantern.lds           stdio.d
+autoexec.map                       fileprefix.d         magiclantern.sym           stdio.o
+backtrace.d                        fileprefix.o         Makefile                   strcasecmp.o
+backtrace.o                        fio-ml.d             Makefile.platform.default  strchr.o
+battery.d                          fio-ml.o             Makefile.setup.default     strcmp.o
+battery.o                          flexinfo.d           memcmp.o                   strcpy.o
+beep.d                             flexinfo.o           mem.d                      strlen.o
+beep.o                             focus.d              memmove.o                  strncmp.o
+bitrate.d                          focus.o              mem.o                      strncpy.o
+bitrate.o                          font_direct.d        menu.d                     strrchr.o
+bmp.d                              font_direct.o        menuhelp.d                 strstr.o
+bmp.o                              footer.d             menuhelp.o                 strtol.o
+bootflags.d                        footer.o             menuindex.d                strtoull.o
+bootflags.o                        fps-engio.d          menuindex.o                strtoul.o
+boot-hack.d                        fps-engio.o          menu.o                     stubs.d
+boot-hack.o                        gcc-libgcc.a         ml-cbr.d                   stubs.o
+builtin-enforcing.d                greenscreen.d        ml-cbr.o                   stubs.S
+builtin-enforcing.o                greenscreen.o        ML-SETUP.FIR               tasks.d
+cfn.c                              gui.c                module.d                   tasks.o
+cfn.d                              gui-common.d         module.o                   tcc-glue.d
+cfn.o                              gui-common.o         movtweaks.d                tcc-glue.o
+chdk-dng.d                         gui.d                movtweaks.o                tskmon.d
+chdk-dng.o                         gui.h                newlib-libc.a              tskmon.o
+chdk-gui_draw.d                    gui.o                newlib-libm.a              tweaks.d
+chdk-gui_draw.o                    hdr.d                notify_box.d               tweaks-eyefi.d
+config.d                           hdr.o                notify_box.o               tweaks-eyefi.o
+config.o                           histogram.d          ph_info_disp.d             tweaks.o
+console.d                          histogram.o          ph_info_disp.o             util.d
+console.o                          ico.d                picstyle-noauto.d          util.o
+consts.h                           ico.o                picstyle-noauto.o          vectorscope.d
+crop-mode-hack.d                   imath.d              posix.d                    vectorscope.o
+crop-mode-hack.o                   imath.o              posix.o                    version.bin
+debug.d                            imgconv.d            powersave.d                version.c
+debug.o                            imgconv.o            powersave.o                version.d
+dialog_test.d                      [01;34minclude[0m              property.d                 version.o
+dialog_test.o                      internals.h          property.o                 vram.d
+dietlibc.a                         lcdsensor.d          propvalues.d               vram.o
+disp_direct.d                      lcdsensor.o          propvalues.o               vsync-lite.d
+disp_direct.o                      lens.d               rand.d                     vsync-lite.o
+edmac.d                            lens.o               rand.o                     zebra.d
+edmac-memcpy.d                     lib_a-memccpy.o      raw.d                      zebra.o
+edmac-memcpy.o                     lib_a-memcpy.o       raw.o                      [01;34mzip[0m
+edmac.o                            lib_a-memcpy-stub.o  rbf_font.d
+electronic_level.d                 lib_a-memmove.o      rbf_font.o
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ make clean && make zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+[ RM       ]   *.o *.d autoexec autoexec.bin magiclantern magiclantern.bin
+[ RM       ]   500D_111.sym magiclantern.sym
+[ RM       ]   magiclantern.bin autoexec autoexec.map location.map
+[ RM       ]   autoexec-fir autoexec-fir.bin
+[ RM       ]   magiclantern.lds
+[ RM       ]   dietlibc.a newlib-libc.a newlib-libm.a gcc-libgcc.a
+[ RM       ]   version.c version.bin
+[ RM       ]   ../../build_tools/xor_chk ../../build_tools/xor_chk.exe
+[ RM dir   ]   zip
+[ RM       ]   *.zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+../../Makefile.inc:70: removing ../../platform/*/magiclantern.sym
+[ RM dir   ]   /home/whr0622/magiclantern/platform/500D.111/zip/
+[ RM       ]   ../../platform/*/magiclantern.sym
+mkdir -p /home/whr0622/magiclantern/platform/500D.111/zip
+[ MKDIR    ]   ML directory structure...
+[ CPP      ]   magiclantern.lds
+[ AS       ]   entry.o
+[ AS       ]   ../../platform/500D.111/stubs.o
+[ VERSION  ]   ../../platform/500D.111/version.c
+[ CC       ]   version.o
+[ CC       ]   backtrace.o
+[ CC       ]   boot-hack.o
+[ CC       ]   fio-ml.o
+[ CC       ]   mem.o
+../../src/mem.c: In function 'mem_total_display':
+../../src/mem.c:1387:13: warning: unused variable 'total' [-Wunused-variable]
+         int total = alloc_total_with_memcheck / 1024;
+             ^
+[ CC       ]   ico.o
+[ CC       ]   edmac.o
+[ CC       ]   menu.o
+[ CC       ]   debug.o
+[ CC       ]   rand.o
+[ CC       ]   posix.o
+[ CC       ]   util.o
+[ CC       ]   imath.o
+[ CC       ]   electronic_level.o
+[ CC       ]   cfn.o
+[ CC       ]   gui.o
+[ CC       ]   picstyle-noauto.o
+[ CC       ]   exmem.o
+[ CC       ]   bmp.o
+[ CC       ]   rbf_font.o
+[ CC       ]   config.o
+[ CC       ]   stdio.o
+[ CC       ]   bitrate.o
+[ CC       ]   lcdsensor.o
+[ CC       ]   tweaks.o
+[ CC       ]   tweaks-eyefi.o
+[ CC       ]   lens.o
+[ CC       ]   property.o
+[ CC       ]   propvalues.o
+[ CC       ]   gui-common.o
+[ CC       ]   chdk-gui_draw.o
+[ CC       ]   movtweaks.o
+[ CC       ]   menuhelp.o
+[ CC       ]   menuindex.o
+[ CC       ]   af_patterns.o
+[ CC       ]   focus.o
+[ CC       ]   notify_box.o
+[ CC       ]   bootflags.o
+[ CC       ]   dialog_test.o
+[ CC       ]   vram.o
+[ CC       ]   greenscreen.o
+[ CC       ]   fps-engio.o
+../../src/fps-engio.c:300:12: warning: 'fps_timer_b_method' defined but not used [-Wunused-variable]
+ static int fps_timer_b_method = 0;
+            ^
+[ CC       ]   shoot.o
+[ CC       ]   hdr.o
+[ CC       ]   lv-img-engio.o
+[ CC       ]   state-object.o
+[ CC       ]   tasks.o
+[ CC       ]   vsync-lite.o
+[ CC       ]   tskmon.o
+[ CC       ]   battery.o
+[ CC       ]   imgconv.o
+[ CC       ]   histogram.o
+[ CC       ]   falsecolor.o
+[ CC       ]   audio-ak.o
+[ CC       ]   zebra.o
+[ CC       ]   vectorscope.o
+[ CC       ]   beep.o
+[ CC       ]   crop-mode-hack.o
+[ CC       ]   ph_info_disp.o
+[ CC       ]   flexinfo.o
+[ CC       ]   screenshot.o
+[ CC       ]   fileprefix.o
+[ CC       ]   lvinfo.o
+[ CC       ]   builtin-enforcing.o
+[ CC       ]   powersave.o
+[ CC       ]   ml-cbr.o
+[ CC       ]   raw.o
+../../src/raw.c: In function 'raw_update_params_work':
+../../src/raw.c:574:10: warning: #warning FIXME: are these values correct for 1080p or 720p? (which of them?) [-Wcpp]
+         #warning FIXME: are these values correct for 1080p or 720p? (which of them?)
+          ^
+[ CC       ]   chdk-dng.o
+[ CC       ]   edmac-memcpy.o
+../../src/edmac-memcpy.c: In function 'edmac_memcpy_init':
+../../src/edmac-memcpy.c:86:57: warning: initialization makes integer from pointer without a cast [enabled by default]
+     static int AbortEDmac_check __attribute__((used)) = &AbortEDmac;
+                                                         ^
+[ CC       ]   console.o
+[ CC       ]   tcc-glue.o
+make -C ../../tcc
+make[1]: Entering directory `/home/whr0622/magiclantern/tcc'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/whr0622/magiclantern/tcc'
+[ CC       ]   module.o
+[ AR       ]   strrchr.o
+[ AR       ]   dietlibc.a
+[ AR       ]   lib_a-setjmp.o
+[ AR       ]   newlib-libc.a
+[ CP       ]   newlib-libm.a
+[ CP       ]   gcc-libgcc.a
+[ LD       ]   magiclantern
+[ SYMBOLS  ]   magiclantern.sym
+[ CP       ]   500D_111.sym
+[ CP       ]   install
+cp ML-SETUP.FIR /home/whr0622/magiclantern/platform/500D.111/zip/
+[ VERSION  ]   ../../platform/500D.111/version.bin
+[ OBJCOPY  ]   magiclantern.bin
+[ STAT     ]   magiclantern.bin
+magiclantern.bin: 445580 bytes
+[ CC       ]   reboot.o
+[ CC       ]   disp_direct.o
+[ CC       ]   font_direct.o
+[ CC       ]   footer.o
+[ LD       ]   autoexec
+[ XOR_CHK  ]   ../../build_tools/xor_chk
+../../build_tools/xor_chk.c: In function ‘main’:
+../../build_tools/xor_chk.c:48:9: warning: format ‘%lX’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘long long unsigned int’ [-Wformat=]
+         printf("Footer magic error (expected 0x%lX, got 0x%lX)\n", 0xCCCCCCCCE12FFF13, footer_magic);
+         ^
+../../build_tools/xor_chk.c:48:9: warning: format ‘%lX’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘uint64_t’ [-Wformat=]
+[ OBJCOPY  ]   autoexec.bin
+[ XOR_CHK  ]   autoexec.bin
+cp autoexec.bin /home/whr0622/magiclantern/platform/500D.111/zip/
+cp ../../data/fonts/*.rbf /home/whr0622/magiclantern/platform/500D.111/zip/ML/fonts/
+cp ../../data/vram/*.lut /home/whr0622/magiclantern/platform/500D.111/zip/ML/data/
+cp ../../data/cropmks/*.bmp /home/whr0622/magiclantern/platform/500D.111/zip/ML/cropmks/
+[ SCRIPTS  ]   install_extra_data
+for target in  CONFIG_MODULES_install; do make $target; done
+make[1]: Entering directory `/home/whr0622/magiclantern/platform/500D.111'
+make -C ../../modules
+make[2]: Entering directory `/home/whr0622/magiclantern/modules'
+make[3]: Entering directory `/home/whr0622/magiclantern/modules'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+
+Building module mlv_lite...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_lite.o
+In file included from mlv_lite.c:48:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_lite.o] Error 1
+
+********************************************************
+WARNING: module mlv_lite failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+[ RM       ]   mlv_lite.o ../mlv_rec/mlv.o mlv_lite.mo mlv_lite.sym mlv_lite.dep mlv_lite.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   raw2dng raw2dng.exe dng2raw dng2raw.exe
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+
+Building module mlv_play...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_play.o
+In file included from mlv_play.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_play.o] Error 1
+
+********************************************************
+WARNING: module mlv_play failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+[ RM       ]   mlv_play.o video.bmp.rsc mlv_play.mo mlv_play.sym mlv_play.dep mlv_play.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+
+Building module mlv_rec...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_rec.o
+In file included from mlv_rec.c:56:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_rec.o] Error 1
+
+********************************************************
+WARNING: module mlv_rec failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+[ RM       ]   mlv_rec.o mlv.o mlv_rec.mo mlv_rec.sym mlv_rec.dep mlv_rec.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   mlv_dump mlv_dump.exe lzma/7zAlloc.host.o lzma/7zBuf.host.o lzma/7zBuf2.host.o lzma/7zCrc.host.o lzma/7zCrcOpt.host.o lzma/7zDec.host.o lzma/7zFile.host.o lzma/7zIn.host.o lzma/7zStream.host.o lzma/Alloc.host.o lzma/Bcj2.host.o lzma/Bra.host.o lzma/Bra86.host.o lzma/BraIA64.host.o lzma/CpuArch.host.o lzma/Delta.host.o lzma/LzFind.host.o lzma/Lzma2Dec.host.o lzma/Lzma2Enc.host.o lzma/Lzma86Dec.host.o lzma/Lzma86Enc.host.o lzma/LzmaDec.host.o lzma/LzmaEnc.host.o lzma/LzmaLib.host.o lzma/Ppmd7.host.o lzma/Ppmd7Dec.host.o lzma/Ppmd7Enc.host.o lzma/Sha256.host.o lzma/Xz.host.o lzma/XzCrc64.host.o lzma/lib7z.a lzma/Threads.w32.o lzma/LzFindMt.w32.o lzma/MtCoder.w32.o lzma/7zAlloc.w32.o lzma/7zBuf.w32.o lzma/7zBuf2.w32.o lzma/7zCrc.w32.o lzma/7zCrcOpt.w32.o lzma/7zDec.w32.o lzma/7zFile.w32.o lzma/7zIn.w32.o lzma/7zStream.w32.o lzma/Alloc.w32.o lzma/Bcj2.w32.o lzma/Bra.w32.o lzma/Bra86.w32.o lzma/BraIA64.w32.o lzma/CpuArch.w32.o lzma/Delta.w32.o lzma/LzFind.w32.o lzma/Lzma2Dec.w32.o lzma/Lzma2Enc.w32.o lzma/Lzma86Dec.w32.o lzma/Lzma86Enc.w32.o lzma/LzmaDec.w32.o lzma/LzmaEnc.w32.o lzma/LzmaLib.w32.o lzma/Ppmd7.w32.o lzma/Ppmd7Dec.w32.o lzma/Ppmd7Enc.w32.o lzma/Sha256.w32.o lzma/Xz.w32.o lzma/XzCrc64.w32.o lzma/lib7z.w32.a 
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+
+Building module mlv_snd...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_snd.o
+In file included from mlv_snd.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_snd.o] Error 1
+
+********************************************************
+WARNING: module mlv_snd failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+[ RM       ]   mlv_snd.o mlv_snd.mo mlv_snd.sym mlv_snd.dep mlv_snd.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+
+Building module file_man...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   file_man.o
+In file included from file_man.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [file_man.o] Error 1
+
+********************************************************
+WARNING: module file_man failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+[ RM       ]   file_man.o file_man.mo file_man.sym file_man.dep file_man.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+
+Building module pic_view...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   pic_view.o
+In file included from pic_view.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [pic_view.o] Error 1
+
+********************************************************
+WARNING: module pic_view failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+[ RM       ]   pic_view.o pic_view.mo pic_view.sym pic_view.dep pic_view.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+
+Building module ettr...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   ettr.o
+In file included from ettr.c:7:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [ettr.o] Error 1
+
+********************************************************
+WARNING: module ettr failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+[ RM       ]   ettr.o ettr.mo ettr.sym ettr.dep ettr.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+
+Building module dual_iso...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dual_iso.o
+In file included from dual_iso.c:60:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dual_iso.o] Error 1
+
+********************************************************
+WARNING: module dual_iso failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+[ RM       ]   dual_iso.o dual_iso.mo dual_iso.sym dual_iso.dep dual_iso.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   cr2hdr cr2hdr.exe dcraw dcraw.c dcraw.exe exiftool.exe exiftool.tar.gz exiftool exiftool.zip cr2hdr.zip cr2hdr-win.zip cr2hdr-win_exiftool-perl-script.zip
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+
+Building module silent...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   silent.o
+In file included from silent.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [silent.o] Error 1
+
+********************************************************
+WARNING: module silent failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+[ RM       ]   silent.o silent.mo silent.sym silent.dep silent.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+
+Building module dot_tune...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dot_tune.o
+In file included from dot_tune.c:11:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dot_tune.o] Error 1
+
+********************************************************
+WARNING: module dot_tune failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+[ RM       ]   dot_tune.o dot_tune.mo dot_tune.sym dot_tune.dep dot_tune.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+
+Building module autoexpo...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   autoexpo.o
+In file included from autoexpo.c:17:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [autoexpo.o] Error 1
+
+********************************************************
+WARNING: module autoexpo failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+[ RM       ]   autoexpo.o autoexpo.mo autoexpo.sym autoexpo.dep autoexpo.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+
+Building module arkanoid...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   arkanoid.o
+In file included from arkanoid.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [arkanoid.o] Error 1
+
+********************************************************
+WARNING: module arkanoid failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+[ RM       ]   arkanoid.o arkanoid.mo arkanoid.sym arkanoid.dep arkanoid.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+
+Building module deflick...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   deflick.o
+In file included from deflick.c:16:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [deflick.o] Error 1
+
+********************************************************
+WARNING: module deflick failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+[ RM       ]   deflick.o deflick.mo deflick.sym deflick.dep deflick.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+
+Building module lua...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   lua/ml-lua-shim.o
+In file included from lua/ml-lua-shim.c:4:0:
+dietlibc/include/unistd.h:72:5: warning: conflicting types for built-in function 'execl' [enabled by default]
+ int execl(const char *path, ...) __THROW;
+     ^
+dietlibc/include/unistd.h:73:5: warning: conflicting types for built-in function 'execle' [enabled by default]
+ int execle(const char *path, ...) __THROW;
+     ^
+[ CC       ]   lua/lapi.o
+[ CC       ]   lua/lcode.o
+[ CC       ]   lua/lctype.o
+[ CC       ]   lua/ldebug.o
+[ CC       ]   lua/ldo.o
+[ CC       ]   lua/ldump.o
+[ CC       ]   lua/lfunc.o
+[ CC       ]   lua/lgc.o
+[ CC       ]   lua/llex.o
+[ CC       ]   lua/lmem.o
+[ CC       ]   lua/lobject.o
+[ CC       ]   lua/lopcodes.o
+[ CC       ]   lua/lparser.o
+[ CC       ]   lua/lstate.o
+[ CC       ]   lua/lstring.o
+[ CC       ]   lua/ltable.o
+[ CC       ]   lua/ltm.o
+[ CC       ]   lua/lundump.o
+[ CC       ]   lua/lvm.o
+[ CC       ]   lua/lzio.o
+[ CC       ]   lua/lauxlib.o
+[ CC       ]   lua/lbaselib.o
+[ CC       ]   lua/lbitlib.o
+[ CC       ]   lua/lcorolib.o
+[ CC       ]   lua/ldblib.o
+[ CC       ]   lua/liolib.o
+[ CC       ]   lua/lmathlib.o
+[ CC       ]   lua/lstrlib.o
+[ CC       ]   lua/ltablib.o
+[ CC       ]   lua/lutf8lib.o
+[ CC       ]   lua/loadlib.o
+[ CC       ]   lua/linit.o
+[ CC       ]   lua_globals.o
+[ CC       ]   lua_console.o
+[ CC       ]   lua_camera.o
+[ CC       ]   lua_lv.o
+[ CC       ]   lua_lens.o
+[ CC       ]   lua_movie.o
+[ CC       ]   lua_display.o
+[ CC       ]   lua_key.o
+[ CC       ]   lua_menu.o
+[ CC       ]   lua_dryos.o
+[ CC       ]   lua_interval.o
+[ CC       ]   lua_battery.o
+[ CC       ]   lua_task.o
+[ CC       ]   lua_property.o
+[ CC       ]   lua_constants.o
+[ CC       ]   lua.o
+In file included from lua.c:21:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [lua.o] Error 1
+
+********************************************************
+WARNING: module lua failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+[ RM       ]   lua/ml-lua-shim.o lua/lapi.o lua/lcode.o lua/lctype.o lua/ldebug.o lua/ldo.o lua/ldump.o lua/lfunc.o lua/lgc.o lua/llex.o lua/lmem.o lua/lobject.o lua/lopcodes.o lua/lparser.o lua/lstate.o lua/lstring.o lua/ltable.o lua/ltm.o lua/lundump.o lua/lvm.o lua/lzio.o lua/lauxlib.o lua/lbaselib.o lua/lbitlib.o lua/lcorolib.o lua/ldblib.o lua/liolib.o lua/lmathlib.o lua/lstrlib.o lua/ltablib.o lua/lutf8lib.o lua/loadlib.o lua/linit.o lua_globals.o lua_console.o lua_camera.o lua_lv.o lua_lens.o lua_movie.o lua_display.o lua_key.o lua_menu.o lua_dryos.o lua_interval.o lua_battery.o lua_task.o lua_property.o lua_constants.o lua.o dietlibc.a lua.mo lua.sym lua.dep lua.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+
+Building module bench...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   bench.o
+In file included from bench.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [bench.o] Error 1
+
+********************************************************
+WARNING: module bench failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+[ RM       ]   bench.o bench.mo bench.sym bench.dep bench.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+
+Building module selftest...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   selftest.o
+In file included from selftest.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [selftest.o] Error 1
+
+********************************************************
+WARNING: module selftest failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+[ RM       ]   selftest.o selftest.mo selftest.sym selftest.dep selftest.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+
+Building module adv_int...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   adv_int.o
+In file included from adv_int.c:8:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [adv_int.o] Error 1
+
+********************************************************
+WARNING: module adv_int failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+[ RM       ]   adv_int.o adv_int.mo adv_int.sym adv_int.dep adv_int.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+
+Building module edmac...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   edmac.o
+In file included from edmac.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [edmac.o] Error 1
+
+********************************************************
+WARNING: module edmac failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+[ RM       ]   edmac.o edmac_util.o edmac_test.o md5.o edmac.mo edmac.sym edmac.dep edmac.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[3]: Leaving directory `/home/whr0622/magiclantern/modules'
+make[2]: Leaving directory `/home/whr0622/magiclantern/modules'
+make -C ../../modules install
+make[2]: Entering directory `/home/whr0622/magiclantern/modules'
+make[3]: Entering directory `/home/whr0622/magiclantern/modules'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+
+Building module mlv_lite...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_lite.o
+In file included from mlv_lite.c:48:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_lite.o] Error 1
+
+********************************************************
+WARNING: module mlv_lite failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+[ RM       ]   mlv_lite.o ../mlv_rec/mlv.o mlv_lite.mo mlv_lite.sym mlv_lite.dep mlv_lite.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   raw2dng raw2dng.exe dng2raw dng2raw.exe
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+
+Building module mlv_play...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_play.o
+In file included from mlv_play.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_play.o] Error 1
+
+********************************************************
+WARNING: module mlv_play failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+[ RM       ]   mlv_play.o video.bmp.rsc mlv_play.mo mlv_play.sym mlv_play.dep mlv_play.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+
+Building module mlv_rec...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_rec.o
+In file included from mlv_rec.c:56:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_rec.o] Error 1
+
+********************************************************
+WARNING: module mlv_rec failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+[ RM       ]   mlv_rec.o mlv.o mlv_rec.mo mlv_rec.sym mlv_rec.dep mlv_rec.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   mlv_dump mlv_dump.exe lzma/7zAlloc.host.o lzma/7zBuf.host.o lzma/7zBuf2.host.o lzma/7zCrc.host.o lzma/7zCrcOpt.host.o lzma/7zDec.host.o lzma/7zFile.host.o lzma/7zIn.host.o lzma/7zStream.host.o lzma/Alloc.host.o lzma/Bcj2.host.o lzma/Bra.host.o lzma/Bra86.host.o lzma/BraIA64.host.o lzma/CpuArch.host.o lzma/Delta.host.o lzma/LzFind.host.o lzma/Lzma2Dec.host.o lzma/Lzma2Enc.host.o lzma/Lzma86Dec.host.o lzma/Lzma86Enc.host.o lzma/LzmaDec.host.o lzma/LzmaEnc.host.o lzma/LzmaLib.host.o lzma/Ppmd7.host.o lzma/Ppmd7Dec.host.o lzma/Ppmd7Enc.host.o lzma/Sha256.host.o lzma/Xz.host.o lzma/XzCrc64.host.o lzma/lib7z.a lzma/Threads.w32.o lzma/LzFindMt.w32.o lzma/MtCoder.w32.o lzma/7zAlloc.w32.o lzma/7zBuf.w32.o lzma/7zBuf2.w32.o lzma/7zCrc.w32.o lzma/7zCrcOpt.w32.o lzma/7zDec.w32.o lzma/7zFile.w32.o lzma/7zIn.w32.o lzma/7zStream.w32.o lzma/Alloc.w32.o lzma/Bcj2.w32.o lzma/Bra.w32.o lzma/Bra86.w32.o lzma/BraIA64.w32.o lzma/CpuArch.w32.o lzma/Delta.w32.o lzma/LzFind.w32.o lzma/Lzma2Dec.w32.o lzma/Lzma2Enc.w32.o lzma/Lzma86Dec.w32.o lzma/Lzma86Enc.w32.o lzma/LzmaDec.w32.o lzma/LzmaEnc.w32.o lzma/LzmaLib.w32.o lzma/Ppmd7.w32.o lzma/Ppmd7Dec.w32.o lzma/Ppmd7Enc.w32.o lzma/Sha256.w32.o lzma/Xz.w32.o lzma/XzCrc64.w32.o lzma/lib7z.w32.a 
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+
+Building module mlv_snd...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_snd.o
+In file included from mlv_snd.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_snd.o] Error 1
+
+********************************************************
+WARNING: module mlv_snd failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+[ RM       ]   mlv_snd.o mlv_snd.mo mlv_snd.sym mlv_snd.dep mlv_snd.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+
+Building module file_man...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   file_man.o
+In file included from file_man.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [file_man.o] Error 1
+
+********************************************************
+WARNING: module file_man failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+[ RM       ]   file_man.o file_man.mo file_man.sym file_man.dep file_man.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+
+Building module pic_view...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   pic_view.o
+In file included from pic_view.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [pic_view.o] Error 1
+
+********************************************************
+WARNING: module pic_view failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+[ RM       ]   pic_view.o pic_view.mo pic_view.sym pic_view.dep pic_view.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+
+Building module ettr...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   ettr.o
+In file included from ettr.c:7:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [ettr.o] Error 1
+
+********************************************************
+WARNING: module ettr failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+[ RM       ]   ettr.o ettr.mo ettr.sym ettr.dep ettr.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+
+Building module dual_iso...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dual_iso.o
+In file included from dual_iso.c:60:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dual_iso.o] Error 1
+
+********************************************************
+WARNING: module dual_iso failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+[ RM       ]   dual_iso.o dual_iso.mo dual_iso.sym dual_iso.dep dual_iso.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   cr2hdr cr2hdr.exe dcraw dcraw.c dcraw.exe exiftool.exe exiftool.tar.gz exiftool exiftool.zip cr2hdr.zip cr2hdr-win.zip cr2hdr-win_exiftool-perl-script.zip
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+
+Building module silent...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   silent.o
+In file included from silent.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [silent.o] Error 1
+
+********************************************************
+WARNING: module silent failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+[ RM       ]   silent.o silent.mo silent.sym silent.dep silent.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+
+Building module dot_tune...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dot_tune.o
+In file included from dot_tune.c:11:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dot_tune.o] Error 1
+
+********************************************************
+WARNING: module dot_tune failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+[ RM       ]   dot_tune.o dot_tune.mo dot_tune.sym dot_tune.dep dot_tune.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+
+Building module autoexpo...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   autoexpo.o
+In file included from autoexpo.c:17:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [autoexpo.o] Error 1
+
+********************************************************
+WARNING: module autoexpo failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+[ RM       ]   autoexpo.o autoexpo.mo autoexpo.sym autoexpo.dep autoexpo.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+
+Building module arkanoid...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   arkanoid.o
+In file included from arkanoid.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [arkanoid.o] Error 1
+
+********************************************************
+WARNING: module arkanoid failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+[ RM       ]   arkanoid.o arkanoid.mo arkanoid.sym arkanoid.dep arkanoid.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+
+Building module deflick...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   deflick.o
+In file included from deflick.c:16:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [deflick.o] Error 1
+
+********************************************************
+WARNING: module deflick failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+[ RM       ]   deflick.o deflick.mo deflick.sym deflick.dep deflick.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+
+Building module lua...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   lua/ml-lua-shim.o
+In file included from lua/ml-lua-shim.c:4:0:
+dietlibc/include/unistd.h:72:5: warning: conflicting types for built-in function 'execl' [enabled by default]
+ int execl(const char *path, ...) __THROW;
+     ^
+dietlibc/include/unistd.h:73:5: warning: conflicting types for built-in function 'execle' [enabled by default]
+ int execle(const char *path, ...) __THROW;
+     ^
+[ CC       ]   lua/lapi.o
+[ CC       ]   lua/lcode.o
+[ CC       ]   lua/lctype.o
+[ CC       ]   lua/ldebug.o
+[ CC       ]   lua/ldo.o
+[ CC       ]   lua/ldump.o
+[ CC       ]   lua/lfunc.o
+[ CC       ]   lua/lgc.o
+[ CC       ]   lua/llex.o
+[ CC       ]   lua/lmem.o
+[ CC       ]   lua/lobject.o
+[ CC       ]   lua/lopcodes.o
+[ CC       ]   lua/lparser.o
+[ CC       ]   lua/lstate.o
+[ CC       ]   lua/lstring.o
+[ CC       ]   lua/ltable.o
+[ CC       ]   lua/ltm.o
+[ CC       ]   lua/lundump.o
+[ CC       ]   lua/lvm.o
+[ CC       ]   lua/lzio.o
+[ CC       ]   lua/lauxlib.o
+[ CC       ]   lua/lbaselib.o
+[ CC       ]   lua/lbitlib.o
+[ CC       ]   lua/lcorolib.o
+[ CC       ]   lua/ldblib.o
+[ CC       ]   lua/liolib.o
+[ CC       ]   lua/lmathlib.o
+[ CC       ]   lua/lstrlib.o
+[ CC       ]   lua/ltablib.o
+[ CC       ]   lua/lutf8lib.o
+[ CC       ]   lua/loadlib.o
+[ CC       ]   lua/linit.o
+[ CC       ]   lua_globals.o
+[ CC       ]   lua_console.o
+[ CC       ]   lua_camera.o
+[ CC       ]   lua_lv.o
+[ CC       ]   lua_lens.o
+[ CC       ]   lua_movie.o
+[ CC       ]   lua_display.o
+[ CC       ]   lua_key.o
+[ CC       ]   lua_menu.o
+[ CC       ]   lua_dryos.o
+[ CC       ]   lua_interval.o
+[ CC       ]   lua_battery.o
+[ CC       ]   lua_task.o
+[ CC       ]   lua_property.o
+[ CC       ]   lua_constants.o
+[ CC       ]   lua.o
+In file included from lua.c:21:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [lua.o] Error 1
+
+********************************************************
+WARNING: module lua failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+[ RM       ]   lua/ml-lua-shim.o lua/lapi.o lua/lcode.o lua/lctype.o lua/ldebug.o lua/ldo.o lua/ldump.o lua/lfunc.o lua/lgc.o lua/llex.o lua/lmem.o lua/lobject.o lua/lopcodes.o lua/lparser.o lua/lstate.o lua/lstring.o lua/ltable.o lua/ltm.o lua/lundump.o lua/lvm.o lua/lzio.o lua/lauxlib.o lua/lbaselib.o lua/lbitlib.o lua/lcorolib.o lua/ldblib.o lua/liolib.o lua/lmathlib.o lua/lstrlib.o lua/ltablib.o lua/lutf8lib.o lua/loadlib.o lua/linit.o lua_globals.o lua_console.o lua_camera.o lua_lv.o lua_lens.o lua_movie.o lua_display.o lua_key.o lua_menu.o lua_dryos.o lua_interval.o lua_battery.o lua_task.o lua_property.o lua_constants.o lua.o dietlibc.a lua.mo lua.sym lua.dep lua.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+
+Building module bench...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   bench.o
+In file included from bench.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [bench.o] Error 1
+
+********************************************************
+WARNING: module bench failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+[ RM       ]   bench.o bench.mo bench.sym bench.dep bench.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+
+Building module selftest...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   selftest.o
+In file included from selftest.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [selftest.o] Error 1
+
+********************************************************
+WARNING: module selftest failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+[ RM       ]   selftest.o selftest.mo selftest.sym selftest.dep selftest.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+
+Building module adv_int...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   adv_int.o
+In file included from adv_int.c:8:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [adv_int.o] Error 1
+
+********************************************************
+WARNING: module adv_int failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+[ RM       ]   adv_int.o adv_int.mo adv_int.sym adv_int.dep adv_int.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+
+Building module edmac...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   edmac.o
+In file included from edmac.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [edmac.o] Error 1
+
+********************************************************
+WARNING: module edmac failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+[ RM       ]   edmac.o edmac_util.o edmac_test.o md5.o edmac.mo edmac.sym edmac.dep edmac.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[3]: Leaving directory `/home/whr0622/magiclantern/modules'
+[ MKDIR    ]   ML directory structure...
+cp ../modules/*/*.mo /home/whr0622/magiclantern/platform/500D.111/zip/ML/modules/
+cp: cannot stat ‘../modules/*/*.mo’: No such file or directory
+make[2]: *** [install] Error 1
+make[2]: Leaving directory `/home/whr0622/magiclantern/modules'
+make[1]: *** [CONFIG_MODULES_install] Error 2
+make[1]: Leaving directory `/home/whr0622/magiclantern/platform/500D.111'
+make: *** [install] Error 2
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ exit
+exit
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ exitmake clean && make zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+[ RM       ]   *.o *.d autoexec autoexec.bin magiclantern magiclantern.bin
+[ RM       ]   500D_111.sym magiclantern.sym
+[ RM       ]   magiclantern.bin autoexec autoexec.map location.map
+[ RM       ]   autoexec-fir autoexec-fir.bin
+[ RM       ]   magiclantern.lds
+[ RM       ]   dietlibc.a newlib-libc.a newlib-libm.a gcc-libgcc.a
+[ RM       ]   version.c version.bin
+[ RM       ]   ../../build_tools/xor_chk ../../build_tools/xor_chk.exe
+[ RM dir   ]   zip
+[ RM       ]   *.zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+../../Makefile.inc:70: removing ../../platform/*/magiclantern.sym
+[ RM dir   ]   /home/whr0622/magiclantern/platform/500D.111/zip/
+[ RM       ]   ../../platform/*/magiclantern.sym
+mkdir -p /home/whr0622/magiclantern/platform/500D.111/zip
+[ MKDIR    ]   ML directory structure...
+[ CPP      ]   magiclantern.lds
+[ AS       ]   entry.o
+[ AS       ]   ../../platform/500D.111/stubs.o
+[ VERSION  ]   ../../platform/500D.111/version.c
+[ CC       ]   version.o
+[ CC       ]   backtrace.o
+[ CC       ]   boot-hack.o
+[ CC       ]   fio-ml.o
+[ CC       ]   mem.o
+../../src/mem.c: In function 'mem_total_display':
+../../src/mem.c:1387:13: warning: unused variable 'total' [-Wunused-variable]
+         int total = alloc_total_with_memcheck / 1024;
+             ^
+[ CC       ]   ico.o
+[ CC       ]   edmac.o
+[ CC       ]   menu.o
+[ CC       ]   debug.o
+[ CC       ]   rand.o
+[ CC       ]   posix.o
+[ CC       ]   util.o
+[ CC       ]   imath.o
+[ CC       ]   electronic_level.o
+[ CC       ]   cfn.o
+[ CC       ]   gui.o
+[ CC       ]   picstyle-noauto.o
+[ CC       ]   exmem.o
+[ CC       ]   bmp.o
+[ CC       ]   rbf_font.o
+[ CC       ]   config.o
+[ CC       ]   stdio.o
+[ CC       ]   bitrate.o
+[ CC       ]   lcdsensor.o
+[ CC       ]   tweaks.o
+[ CC       ]   tweaks-eyefi.o
+[ CC       ]   lens.o
+[ CC       ]   property.o
+[ CC       ]   propvalues.o
+[ CC       ]   gui-common.o
+[ CC       ]   chdk-gui_draw.o
+[ CC       ]   movtweaks.o
+^Cmake: *** [movtweaks.o] Interrupt
+
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ pip[K[K[Kpip install docutils
+Requirement already satisfied (use --upgrade to upgrade): docutils in /home/whr0622/.local/lib/python2.7/site-packages
+Cleaning up...
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ pip install docutilsmake clean && make zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+[ RM       ]   *.o *.d autoexec autoexec.bin magiclantern magiclantern.bin
+[ RM       ]   500D_111.sym magiclantern.sym
+[ RM       ]   magiclantern.bin autoexec autoexec.map location.map
+[ RM       ]   autoexec-fir autoexec-fir.bin
+[ RM       ]   magiclantern.lds
+[ RM       ]   dietlibc.a newlib-libc.a newlib-libm.a gcc-libgcc.a
+[ RM       ]   version.c version.bin
+[ RM       ]   ../../build_tools/xor_chk ../../build_tools/xor_chk.exe
+[ RM dir   ]   zip
+[ RM       ]   *.zip
+Using /home/whr0622/gcc-arm-none-eabi-4_8-2013q4/bin/arm-none-eabi-gcc (found in home directory).
+../../Makefile.inc:70: removing ../../platform/*/magiclantern.sym
+[ RM dir   ]   /home/whr0622/magiclantern/platform/500D.111/zip/
+[ RM       ]   ../../platform/*/magiclantern.sym
+mkdir -p /home/whr0622/magiclantern/platform/500D.111/zip
+[ MKDIR    ]   ML directory structure...
+[ CPP      ]   magiclantern.lds
+[ AS       ]   entry.o
+[ AS       ]   ../../platform/500D.111/stubs.o
+[ VERSION  ]   ../../platform/500D.111/version.c
+[ CC       ]   version.o
+[ CC       ]   backtrace.o
+[ CC       ]   boot-hack.o
+[ CC       ]   fio-ml.o
+[ CC       ]   mem.o
+../../src/mem.c: In function 'mem_total_display':
+../../src/mem.c:1387:13: warning: unused variable 'total' [-Wunused-variable]
+         int total = alloc_total_with_memcheck / 1024;
+             ^
+[ CC       ]   ico.o
+[ CC       ]   edmac.o
+[ CC       ]   menu.o
+[ CC       ]   debug.o
+[ CC       ]   rand.o
+[ CC       ]   posix.o
+[ CC       ]   util.o
+[ CC       ]   imath.o
+[ CC       ]   electronic_level.o
+[ CC       ]   cfn.o
+[ CC       ]   gui.o
+[ CC       ]   picstyle-noauto.o
+[ CC       ]   exmem.o
+[ CC       ]   bmp.o
+[ CC       ]   rbf_font.o
+[ CC       ]   config.o
+[ CC       ]   stdio.o
+[ CC       ]   bitrate.o
+[ CC       ]   lcdsensor.o
+[ CC       ]   tweaks.o
+[ CC       ]   tweaks-eyefi.o
+[ CC       ]   lens.o
+[ CC       ]   property.o
+[ CC       ]   propvalues.o
+[ CC       ]   gui-common.o
+[ CC       ]   chdk-gui_draw.o
+[ CC       ]   movtweaks.o
+[ CC       ]   menuhelp.o
+[ CC       ]   menuindex.o
+[ CC       ]   af_patterns.o
+[ CC       ]   focus.o
+[ CC       ]   notify_box.o
+[ CC       ]   bootflags.o
+[ CC       ]   dialog_test.o
+[ CC       ]   vram.o
+[ CC       ]   greenscreen.o
+[ CC       ]   fps-engio.o
+../../src/fps-engio.c:300:12: warning: 'fps_timer_b_method' defined but not used [-Wunused-variable]
+ static int fps_timer_b_method = 0;
+            ^
+[ CC       ]   shoot.o
+[ CC       ]   hdr.o
+[ CC       ]   lv-img-engio.o
+[ CC       ]   state-object.o
+[ CC       ]   tasks.o
+[ CC       ]   vsync-lite.o
+[ CC       ]   tskmon.o
+[ CC       ]   battery.o
+[ CC       ]   imgconv.o
+[ CC       ]   histogram.o
+[ CC       ]   falsecolor.o
+[ CC       ]   audio-ak.o
+[ CC       ]   zebra.o
+[ CC       ]   vectorscope.o
+[ CC       ]   beep.o
+[ CC       ]   crop-mode-hack.o
+[ CC       ]   ph_info_disp.o
+[ CC       ]   flexinfo.o
+[ CC       ]   screenshot.o
+[ CC       ]   fileprefix.o
+[ CC       ]   lvinfo.o
+[ CC       ]   builtin-enforcing.o
+[ CC       ]   powersave.o
+[ CC       ]   ml-cbr.o
+[ CC       ]   raw.o
+../../src/raw.c: In function 'raw_update_params_work':
+../../src/raw.c:574:10: warning: #warning FIXME: are these values correct for 1080p or 720p? (which of them?) [-Wcpp]
+         #warning FIXME: are these values correct for 1080p or 720p? (which of them?)
+          ^
+[ CC       ]   chdk-dng.o
+[ CC       ]   edmac-memcpy.o
+../../src/edmac-memcpy.c: In function 'edmac_memcpy_init':
+../../src/edmac-memcpy.c:86:57: warning: initialization makes integer from pointer without a cast [enabled by default]
+     static int AbortEDmac_check __attribute__((used)) = &AbortEDmac;
+                                                         ^
+[ CC       ]   console.o
+[ CC       ]   tcc-glue.o
+make -C ../../tcc
+make[1]: Entering directory `/home/whr0622/magiclantern/tcc'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/whr0622/magiclantern/tcc'
+[ CC       ]   module.o
+[ AR       ]   strrchr.o
+[ AR       ]   dietlibc.a
+[ AR       ]   lib_a-setjmp.o
+[ AR       ]   newlib-libc.a
+[ CP       ]   newlib-libm.a
+[ CP       ]   gcc-libgcc.a
+[ LD       ]   magiclantern
+[ SYMBOLS  ]   magiclantern.sym
+[ CP       ]   500D_111.sym
+[ CP       ]   install
+cp ML-SETUP.FIR /home/whr0622/magiclantern/platform/500D.111/zip/
+[ VERSION  ]   ../../platform/500D.111/version.bin
+[ OBJCOPY  ]   magiclantern.bin
+[ STAT     ]   magiclantern.bin
+magiclantern.bin: 445580 bytes
+[ CC       ]   reboot.o
+[ CC       ]   disp_direct.o
+[ CC       ]   font_direct.o
+[ CC       ]   footer.o
+[ LD       ]   autoexec
+[ XOR_CHK  ]   ../../build_tools/xor_chk
+../../build_tools/xor_chk.c: In function ‘main’:
+../../build_tools/xor_chk.c:48:9: warning: format ‘%lX’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘long long unsigned int’ [-Wformat=]
+         printf("Footer magic error (expected 0x%lX, got 0x%lX)\n", 0xCCCCCCCCE12FFF13, footer_magic);
+         ^
+../../build_tools/xor_chk.c:48:9: warning: format ‘%lX’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘uint64_t’ [-Wformat=]
+[ OBJCOPY  ]   autoexec.bin
+[ XOR_CHK  ]   autoexec.bin
+cp autoexec.bin /home/whr0622/magiclantern/platform/500D.111/zip/
+cp ../../data/fonts/*.rbf /home/whr0622/magiclantern/platform/500D.111/zip/ML/fonts/
+cp ../../data/vram/*.lut /home/whr0622/magiclantern/platform/500D.111/zip/ML/data/
+cp ../../data/cropmks/*.bmp /home/whr0622/magiclantern/platform/500D.111/zip/ML/cropmks/
+[ SCRIPTS  ]   install_extra_data
+for target in  CONFIG_MODULES_install; do make $target; done
+make[1]: Entering directory `/home/whr0622/magiclantern/platform/500D.111'
+make -C ../../modules
+make[2]: Entering directory `/home/whr0622/magiclantern/modules'
+make[3]: Entering directory `/home/whr0622/magiclantern/modules'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+
+Building module mlv_lite...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_lite.o
+In file included from mlv_lite.c:48:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_lite.o] Error 1
+
+********************************************************
+WARNING: module mlv_lite failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+[ RM       ]   mlv_lite.o ../mlv_rec/mlv.o mlv_lite.mo mlv_lite.sym mlv_lite.dep mlv_lite.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   raw2dng raw2dng.exe dng2raw dng2raw.exe
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+
+Building module mlv_play...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_play.o
+In file included from mlv_play.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_play.o] Error 1
+
+********************************************************
+WARNING: module mlv_play failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+[ RM       ]   mlv_play.o video.bmp.rsc mlv_play.mo mlv_play.sym mlv_play.dep mlv_play.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+
+Building module mlv_rec...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_rec.o
+In file included from mlv_rec.c:56:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_rec.o] Error 1
+
+********************************************************
+WARNING: module mlv_rec failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+[ RM       ]   mlv_rec.o mlv.o mlv_rec.mo mlv_rec.sym mlv_rec.dep mlv_rec.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   mlv_dump mlv_dump.exe lzma/7zAlloc.host.o lzma/7zBuf.host.o lzma/7zBuf2.host.o lzma/7zCrc.host.o lzma/7zCrcOpt.host.o lzma/7zDec.host.o lzma/7zFile.host.o lzma/7zIn.host.o lzma/7zStream.host.o lzma/Alloc.host.o lzma/Bcj2.host.o lzma/Bra.host.o lzma/Bra86.host.o lzma/BraIA64.host.o lzma/CpuArch.host.o lzma/Delta.host.o lzma/LzFind.host.o lzma/Lzma2Dec.host.o lzma/Lzma2Enc.host.o lzma/Lzma86Dec.host.o lzma/Lzma86Enc.host.o lzma/LzmaDec.host.o lzma/LzmaEnc.host.o lzma/LzmaLib.host.o lzma/Ppmd7.host.o lzma/Ppmd7Dec.host.o lzma/Ppmd7Enc.host.o lzma/Sha256.host.o lzma/Xz.host.o lzma/XzCrc64.host.o lzma/lib7z.a lzma/Threads.w32.o lzma/LzFindMt.w32.o lzma/MtCoder.w32.o lzma/7zAlloc.w32.o lzma/7zBuf.w32.o lzma/7zBuf2.w32.o lzma/7zCrc.w32.o lzma/7zCrcOpt.w32.o lzma/7zDec.w32.o lzma/7zFile.w32.o lzma/7zIn.w32.o lzma/7zStream.w32.o lzma/Alloc.w32.o lzma/Bcj2.w32.o lzma/Bra.w32.o lzma/Bra86.w32.o lzma/BraIA64.w32.o lzma/CpuArch.w32.o lzma/Delta.w32.o lzma/LzFind.w32.o lzma/Lzma2Dec.w32.o lzma/Lzma2Enc.w32.o lzma/Lzma86Dec.w32.o lzma/Lzma86Enc.w32.o lzma/LzmaDec.w32.o lzma/LzmaEnc.w32.o lzma/LzmaLib.w32.o lzma/Ppmd7.w32.o lzma/Ppmd7Dec.w32.o lzma/Ppmd7Enc.w32.o lzma/Sha256.w32.o lzma/Xz.w32.o lzma/XzCrc64.w32.o lzma/lib7z.w32.a 
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+
+Building module mlv_snd...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_snd.o
+In file included from mlv_snd.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_snd.o] Error 1
+
+********************************************************
+WARNING: module mlv_snd failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+[ RM       ]   mlv_snd.o mlv_snd.mo mlv_snd.sym mlv_snd.dep mlv_snd.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+
+Building module file_man...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   file_man.o
+In file included from file_man.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [file_man.o] Error 1
+
+********************************************************
+WARNING: module file_man failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+[ RM       ]   file_man.o file_man.mo file_man.sym file_man.dep file_man.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+
+Building module pic_view...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   pic_view.o
+In file included from pic_view.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [pic_view.o] Error 1
+
+********************************************************
+WARNING: module pic_view failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+[ RM       ]   pic_view.o pic_view.mo pic_view.sym pic_view.dep pic_view.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+
+Building module ettr...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   ettr.o
+In file included from ettr.c:7:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [ettr.o] Error 1
+
+********************************************************
+WARNING: module ettr failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+[ RM       ]   ettr.o ettr.mo ettr.sym ettr.dep ettr.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+
+Building module dual_iso...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dual_iso.o
+In file included from dual_iso.c:60:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dual_iso.o] Error 1
+
+********************************************************
+WARNING: module dual_iso failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+[ RM       ]   dual_iso.o dual_iso.mo dual_iso.sym dual_iso.dep dual_iso.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   cr2hdr cr2hdr.exe dcraw dcraw.c dcraw.exe exiftool.exe exiftool.tar.gz exiftool exiftool.zip cr2hdr.zip cr2hdr-win.zip cr2hdr-win_exiftool-perl-script.zip
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+
+Building module silent...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   silent.o
+In file included from silent.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [silent.o] Error 1
+
+********************************************************
+WARNING: module silent failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+[ RM       ]   silent.o silent.mo silent.sym silent.dep silent.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+
+Building module dot_tune...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dot_tune.o
+In file included from dot_tune.c:11:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dot_tune.o] Error 1
+
+********************************************************
+WARNING: module dot_tune failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+[ RM       ]   dot_tune.o dot_tune.mo dot_tune.sym dot_tune.dep dot_tune.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+
+Building module autoexpo...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   autoexpo.o
+In file included from autoexpo.c:17:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [autoexpo.o] Error 1
+
+********************************************************
+WARNING: module autoexpo failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+[ RM       ]   autoexpo.o autoexpo.mo autoexpo.sym autoexpo.dep autoexpo.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+
+Building module arkanoid...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   arkanoid.o
+In file included from arkanoid.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [arkanoid.o] Error 1
+
+********************************************************
+WARNING: module arkanoid failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+[ RM       ]   arkanoid.o arkanoid.mo arkanoid.sym arkanoid.dep arkanoid.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+
+Building module deflick...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   deflick.o
+In file included from deflick.c:16:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [deflick.o] Error 1
+
+********************************************************
+WARNING: module deflick failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+[ RM       ]   deflick.o deflick.mo deflick.sym deflick.dep deflick.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+
+Building module lua...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   lua/ml-lua-shim.o
+In file included from lua/ml-lua-shim.c:4:0:
+dietlibc/include/unistd.h:72:5: warning: conflicting types for built-in function 'execl' [enabled by default]
+ int execl(const char *path, ...) __THROW;
+     ^
+dietlibc/include/unistd.h:73:5: warning: conflicting types for built-in function 'execle' [enabled by default]
+ int execle(const char *path, ...) __THROW;
+     ^
+[ CC       ]   lua/lapi.o
+[ CC       ]   lua/lcode.o
+[ CC       ]   lua/lctype.o
+[ CC       ]   lua/ldebug.o
+[ CC       ]   lua/ldo.o
+[ CC       ]   lua/ldump.o
+[ CC       ]   lua/lfunc.o
+[ CC       ]   lua/lgc.o
+[ CC       ]   lua/llex.o
+[ CC       ]   lua/lmem.o
+[ CC       ]   lua/lobject.o
+[ CC       ]   lua/lopcodes.o
+[ CC       ]   lua/lparser.o
+[ CC       ]   lua/lstate.o
+[ CC       ]   lua/lstring.o
+[ CC       ]   lua/ltable.o
+[ CC       ]   lua/ltm.o
+[ CC       ]   lua/lundump.o
+[ CC       ]   lua/lvm.o
+[ CC       ]   lua/lzio.o
+[ CC       ]   lua/lauxlib.o
+[ CC       ]   lua/lbaselib.o
+[ CC       ]   lua/lbitlib.o
+[ CC       ]   lua/lcorolib.o
+[ CC       ]   lua/ldblib.o
+[ CC       ]   lua/liolib.o
+[ CC       ]   lua/lmathlib.o
+[ CC       ]   lua/lstrlib.o
+[ CC       ]   lua/ltablib.o
+[ CC       ]   lua/lutf8lib.o
+[ CC       ]   lua/loadlib.o
+[ CC       ]   lua/linit.o
+[ CC       ]   lua_globals.o
+[ CC       ]   lua_console.o
+[ CC       ]   lua_camera.o
+[ CC       ]   lua_lv.o
+[ CC       ]   lua_lens.o
+[ CC       ]   lua_movie.o
+[ CC       ]   lua_display.o
+[ CC       ]   lua_key.o
+[ CC       ]   lua_menu.o
+[ CC       ]   lua_dryos.o
+[ CC       ]   lua_interval.o
+[ CC       ]   lua_battery.o
+[ CC       ]   lua_task.o
+[ CC       ]   lua_property.o
+[ CC       ]   lua_constants.o
+[ CC       ]   lua.o
+In file included from lua.c:21:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [lua.o] Error 1
+
+********************************************************
+WARNING: module lua failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+[ RM       ]   lua/ml-lua-shim.o lua/lapi.o lua/lcode.o lua/lctype.o lua/ldebug.o lua/ldo.o lua/ldump.o lua/lfunc.o lua/lgc.o lua/llex.o lua/lmem.o lua/lobject.o lua/lopcodes.o lua/lparser.o lua/lstate.o lua/lstring.o lua/ltable.o lua/ltm.o lua/lundump.o lua/lvm.o lua/lzio.o lua/lauxlib.o lua/lbaselib.o lua/lbitlib.o lua/lcorolib.o lua/ldblib.o lua/liolib.o lua/lmathlib.o lua/lstrlib.o lua/ltablib.o lua/lutf8lib.o lua/loadlib.o lua/linit.o lua_globals.o lua_console.o lua_camera.o lua_lv.o lua_lens.o lua_movie.o lua_display.o lua_key.o lua_menu.o lua_dryos.o lua_interval.o lua_battery.o lua_task.o lua_property.o lua_constants.o lua.o dietlibc.a lua.mo lua.sym lua.dep lua.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+
+Building module bench...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   bench.o
+In file included from bench.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [bench.o] Error 1
+
+********************************************************
+WARNING: module bench failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+[ RM       ]   bench.o bench.mo bench.sym bench.dep bench.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+
+Building module selftest...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   selftest.o
+In file included from selftest.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [selftest.o] Error 1
+
+********************************************************
+WARNING: module selftest failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+[ RM       ]   selftest.o selftest.mo selftest.sym selftest.dep selftest.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+
+Building module adv_int...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   adv_int.o
+In file included from adv_int.c:8:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [adv_int.o] Error 1
+
+********************************************************
+WARNING: module adv_int failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+[ RM       ]   adv_int.o adv_int.mo adv_int.sym adv_int.dep adv_int.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+
+Building module edmac...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   edmac.o
+In file included from edmac.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [edmac.o] Error 1
+
+********************************************************
+WARNING: module edmac failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+[ RM       ]   edmac.o edmac_util.o edmac_test.o md5.o edmac.mo edmac.sym edmac.dep edmac.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[3]: Leaving directory `/home/whr0622/magiclantern/modules'
+make[2]: Leaving directory `/home/whr0622/magiclantern/modules'
+make -C ../../modules install
+make[2]: Entering directory `/home/whr0622/magiclantern/modules'
+make[3]: Entering directory `/home/whr0622/magiclantern/modules'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+
+Building module mlv_lite...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_lite.o
+In file included from mlv_lite.c:48:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_lite.o] Error 1
+
+********************************************************
+WARNING: module mlv_lite failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_lite'
+[ RM       ]   mlv_lite.o ../mlv_rec/mlv.o mlv_lite.mo mlv_lite.sym mlv_lite.dep mlv_lite.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   raw2dng raw2dng.exe dng2raw dng2raw.exe
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_lite'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+
+Building module mlv_play...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_play.o
+In file included from mlv_play.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_play.o] Error 1
+
+********************************************************
+WARNING: module mlv_play failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_play'
+[ RM       ]   mlv_play.o video.bmp.rsc mlv_play.mo mlv_play.sym mlv_play.dep mlv_play.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_play'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+
+Building module mlv_rec...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_rec.o
+In file included from mlv_rec.c:56:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_rec.o] Error 1
+
+********************************************************
+WARNING: module mlv_rec failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_rec'
+[ RM       ]   mlv_rec.o mlv.o mlv_rec.mo mlv_rec.sym mlv_rec.dep mlv_rec.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   mlv_dump mlv_dump.exe lzma/7zAlloc.host.o lzma/7zBuf.host.o lzma/7zBuf2.host.o lzma/7zCrc.host.o lzma/7zCrcOpt.host.o lzma/7zDec.host.o lzma/7zFile.host.o lzma/7zIn.host.o lzma/7zStream.host.o lzma/Alloc.host.o lzma/Bcj2.host.o lzma/Bra.host.o lzma/Bra86.host.o lzma/BraIA64.host.o lzma/CpuArch.host.o lzma/Delta.host.o lzma/LzFind.host.o lzma/Lzma2Dec.host.o lzma/Lzma2Enc.host.o lzma/Lzma86Dec.host.o lzma/Lzma86Enc.host.o lzma/LzmaDec.host.o lzma/LzmaEnc.host.o lzma/LzmaLib.host.o lzma/Ppmd7.host.o lzma/Ppmd7Dec.host.o lzma/Ppmd7Enc.host.o lzma/Sha256.host.o lzma/Xz.host.o lzma/XzCrc64.host.o lzma/lib7z.a lzma/Threads.w32.o lzma/LzFindMt.w32.o lzma/MtCoder.w32.o lzma/7zAlloc.w32.o lzma/7zBuf.w32.o lzma/7zBuf2.w32.o lzma/7zCrc.w32.o lzma/7zCrcOpt.w32.o lzma/7zDec.w32.o lzma/7zFile.w32.o lzma/7zIn.w32.o lzma/7zStream.w32.o lzma/Alloc.w32.o lzma/Bcj2.w32.o lzma/Bra.w32.o lzma/Bra86.w32.o lzma/BraIA64.w32.o lzma/CpuArch.w32.o lzma/Delta.w32.o lzma/LzFind.w32.o lzma/Lzma2Dec.w32.o lzma/Lzma2Enc.w32.o lzma/Lzma86Dec.w32.o lzma/Lzma86Enc.w32.o lzma/LzmaDec.w32.o lzma/LzmaEnc.w32.o lzma/LzmaLib.w32.o lzma/Ppmd7.w32.o lzma/Ppmd7Dec.w32.o lzma/Ppmd7Enc.w32.o lzma/Sha256.w32.o lzma/Xz.w32.o lzma/XzCrc64.w32.o lzma/lib7z.w32.a 
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_rec'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+
+Building module mlv_snd...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   mlv_snd.o
+In file included from mlv_snd.c:25:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [mlv_snd.o] Error 1
+
+********************************************************
+WARNING: module mlv_snd failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/mlv_snd'
+[ RM       ]   mlv_snd.o mlv_snd.mo mlv_snd.sym mlv_snd.dep mlv_snd.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/mlv_snd'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+
+Building module file_man...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   file_man.o
+In file included from file_man.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [file_man.o] Error 1
+
+********************************************************
+WARNING: module file_man failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/file_man'
+[ RM       ]   file_man.o file_man.mo file_man.sym file_man.dep file_man.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/file_man'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+
+Building module pic_view...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   pic_view.o
+In file included from pic_view.c:4:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [pic_view.o] Error 1
+
+********************************************************
+WARNING: module pic_view failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/pic_view'
+[ RM       ]   pic_view.o pic_view.mo pic_view.sym pic_view.dep pic_view.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/pic_view'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+
+Building module ettr...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   ettr.o
+In file included from ettr.c:7:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [ettr.o] Error 1
+
+********************************************************
+WARNING: module ettr failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/ettr'
+[ RM       ]   ettr.o ettr.mo ettr.sym ettr.dep ettr.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/ettr'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+
+Building module dual_iso...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dual_iso.o
+In file included from dual_iso.c:60:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dual_iso.o] Error 1
+
+********************************************************
+WARNING: module dual_iso failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dual_iso'
+[ RM       ]   dual_iso.o dual_iso.mo dual_iso.sym dual_iso.dep dual_iso.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+[ RM       ]   cr2hdr cr2hdr.exe dcraw dcraw.c dcraw.exe exiftool.exe exiftool.tar.gz exiftool exiftool.zip cr2hdr.zip cr2hdr-win.zip cr2hdr-win_exiftool-perl-script.zip
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dual_iso'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+
+Building module silent...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   silent.o
+In file included from silent.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [silent.o] Error 1
+
+********************************************************
+WARNING: module silent failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/silent'
+[ RM       ]   silent.o silent.mo silent.sym silent.dep silent.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/silent'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+
+Building module dot_tune...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   dot_tune.o
+In file included from dot_tune.c:11:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [dot_tune.o] Error 1
+
+********************************************************
+WARNING: module dot_tune failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/dot_tune'
+[ RM       ]   dot_tune.o dot_tune.mo dot_tune.sym dot_tune.dep dot_tune.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/dot_tune'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+
+Building module autoexpo...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   autoexpo.o
+In file included from autoexpo.c:17:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [autoexpo.o] Error 1
+
+********************************************************
+WARNING: module autoexpo failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/autoexpo'
+[ RM       ]   autoexpo.o autoexpo.mo autoexpo.sym autoexpo.dep autoexpo.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/autoexpo'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+
+Building module arkanoid...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   arkanoid.o
+In file included from arkanoid.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [arkanoid.o] Error 1
+
+********************************************************
+WARNING: module arkanoid failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/arkanoid'
+[ RM       ]   arkanoid.o arkanoid.mo arkanoid.sym arkanoid.dep arkanoid.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/arkanoid'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+
+Building module deflick...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   deflick.o
+In file included from deflick.c:16:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [deflick.o] Error 1
+
+********************************************************
+WARNING: module deflick failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/deflick'
+[ RM       ]   deflick.o deflick.mo deflick.sym deflick.dep deflick.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/deflick'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+
+Building module lua...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   lua/ml-lua-shim.o
+In file included from lua/ml-lua-shim.c:4:0:
+dietlibc/include/unistd.h:72:5: warning: conflicting types for built-in function 'execl' [enabled by default]
+ int execl(const char *path, ...) __THROW;
+     ^
+dietlibc/include/unistd.h:73:5: warning: conflicting types for built-in function 'execle' [enabled by default]
+ int execle(const char *path, ...) __THROW;
+     ^
+[ CC       ]   lua/lapi.o
+[ CC       ]   lua/lcode.o
+[ CC       ]   lua/lctype.o
+[ CC       ]   lua/ldebug.o
+[ CC       ]   lua/ldo.o
+[ CC       ]   lua/ldump.o
+[ CC       ]   lua/lfunc.o
+[ CC       ]   lua/lgc.o
+[ CC       ]   lua/llex.o
+[ CC       ]   lua/lmem.o
+[ CC       ]   lua/lobject.o
+[ CC       ]   lua/lopcodes.o
+[ CC       ]   lua/lparser.o
+[ CC       ]   lua/lstate.o
+[ CC       ]   lua/lstring.o
+[ CC       ]   lua/ltable.o
+[ CC       ]   lua/ltm.o
+[ CC       ]   lua/lundump.o
+[ CC       ]   lua/lvm.o
+[ CC       ]   lua/lzio.o
+[ CC       ]   lua/lauxlib.o
+[ CC       ]   lua/lbaselib.o
+[ CC       ]   lua/lbitlib.o
+[ CC       ]   lua/lcorolib.o
+[ CC       ]   lua/ldblib.o
+[ CC       ]   lua/liolib.o
+[ CC       ]   lua/lmathlib.o
+[ CC       ]   lua/lstrlib.o
+[ CC       ]   lua/ltablib.o
+[ CC       ]   lua/lutf8lib.o
+[ CC       ]   lua/loadlib.o
+[ CC       ]   lua/linit.o
+[ CC       ]   lua_globals.o
+[ CC       ]   lua_console.o
+[ CC       ]   lua_camera.o
+[ CC       ]   lua_lv.o
+[ CC       ]   lua_lens.o
+[ CC       ]   lua_movie.o
+[ CC       ]   lua_display.o
+[ CC       ]   lua_key.o
+[ CC       ]   lua_menu.o
+[ CC       ]   lua_dryos.o
+[ CC       ]   lua_interval.o
+[ CC       ]   lua_battery.o
+[ CC       ]   lua_task.o
+[ CC       ]   lua_property.o
+[ CC       ]   lua_constants.o
+[ CC       ]   lua.o
+In file included from lua.c:21:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [lua.o] Error 1
+
+********************************************************
+WARNING: module lua failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/lua'
+[ RM       ]   lua/ml-lua-shim.o lua/lapi.o lua/lcode.o lua/lctype.o lua/ldebug.o lua/ldo.o lua/ldump.o lua/lfunc.o lua/lgc.o lua/llex.o lua/lmem.o lua/lobject.o lua/lopcodes.o lua/lparser.o lua/lstate.o lua/lstring.o lua/ltable.o lua/ltm.o lua/lundump.o lua/lvm.o lua/lzio.o lua/lauxlib.o lua/lbaselib.o lua/lbitlib.o lua/lcorolib.o lua/ldblib.o lua/liolib.o lua/lmathlib.o lua/lstrlib.o lua/ltablib.o lua/lutf8lib.o lua/loadlib.o lua/linit.o lua_globals.o lua_console.o lua_camera.o lua_lv.o lua_lens.o lua_movie.o lua_display.o lua_key.o lua_menu.o lua_dryos.o lua_interval.o lua_battery.o lua_task.o lua_property.o lua_constants.o lua.o dietlibc.a lua.mo lua.sym lua.dep lua.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/lua'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+
+Building module bench...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   bench.o
+In file included from bench.c:3:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [bench.o] Error 1
+
+********************************************************
+WARNING: module bench failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/bench'
+[ RM       ]   bench.o bench.mo bench.sym bench.dep bench.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/bench'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+
+Building module selftest...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   selftest.o
+In file included from selftest.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [selftest.o] Error 1
+
+********************************************************
+WARNING: module selftest failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/selftest'
+[ RM       ]   selftest.o selftest.mo selftest.sym selftest.dep selftest.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/selftest'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+
+Building module adv_int...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   adv_int.o
+In file included from adv_int.c:8:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [adv_int.o] Error 1
+
+********************************************************
+WARNING: module adv_int failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/adv_int'
+[ RM       ]   adv_int.o adv_int.mo adv_int.sym adv_int.dep adv_int.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/adv_int'
+make[4]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+
+Building module edmac...
+Updated HGVERSION
+[ README   ]   module_strings.h
+
+Could not find rst2html/rst2html5/rst2html.py/rst2html5.py.
+Please install python-docutils (pip install docutils).
+
+[ CC       ]   edmac.o
+In file included from edmac.c:1:0:
+../../src/module.h:344:28: fatal error: module_strings.h: No such file or directory
+ #include "module_strings.h"
+                            ^
+compilation terminated.
+make[5]: *** [edmac.o] Error 1
+
+********************************************************
+WARNING: module edmac failed to build, deleting
+********************************************************
+
+make[5]: Entering directory `/home/whr0622/magiclantern/modules/edmac'
+[ RM       ]   edmac.o edmac_util.o edmac_test.o md5.o edmac.mo edmac.sym edmac.dep edmac.zip module_strings.h hgdiff.tmp *.o *.d *.dep *.sym hgstamp
+make[5]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[4]: Leaving directory `/home/whr0622/magiclantern/modules/edmac'
+make[3]: Leaving directory `/home/whr0622/magiclantern/modules'
+[ MKDIR    ]   ML directory structure...
+cp ../modules/*/*.mo /home/whr0622/magiclantern/platform/500D.111/zip/ML/modules/
+cp: cannot stat ‘../modules/*/*.mo’: No such file or directory
+make[2]: *** [install] Error 1
+make[2]: Leaving directory `/home/whr0622/magiclantern/modules'
+make[1]: *** [CONFIG_MODULES_install] Error 2
+make[1]: Leaving directory `/home/whr0622/magiclantern/platform/500D.111'
+make: *** [install] Error 2
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ ls
+500D_111.sym                       electronic_level.o   lib_a-memset.o             reboot.d
+af_patterns.d                      entry.d              lib_a-setjmp.o             reboot.o
+af_patterns.o                      entry.o              location.map               screenlog.0
+atoi.o                             errno_location.o     lv-img-engio.d             screenshot.d
+atol.o                             errno.o              lv-img-engio.o             screenshot.o
+audio-ak.d                         exmem.d              lvinfo.d                   shoot.d
+audio-ak.o                         exmem.o              lvinfo.o                   shoot.o
+audio.c.500d_under_construction.c  falsecolor.d         [0m[01;32mmagiclantern[0m               state-object.d
+[01;32mautoexec[0m                           falsecolor.o         [01;32mmagiclantern.bin[0m           state-object.o
+[01;32mautoexec.bin[0m                       features.h           magiclantern.lds           stdio.d
+autoexec.map                       fileprefix.d         magiclantern.sym           stdio.o
+backtrace.d                        fileprefix.o         Makefile                   strcasecmp.o
+backtrace.o                        fio-ml.d             Makefile.platform.default  strchr.o
+battery.d                          fio-ml.o             Makefile.setup.default     strcmp.o
+battery.o                          flexinfo.d           memcmp.o                   strcpy.o
+beep.d                             flexinfo.o           mem.d                      strlen.o
+beep.o                             focus.d              memmove.o                  strncmp.o
+bitrate.d                          focus.o              mem.o                      strncpy.o
+bitrate.o                          font_direct.d        menu.d                     strrchr.o
+bmp.d                              font_direct.o        menuhelp.d                 strstr.o
+bmp.o                              footer.d             menuhelp.o                 strtol.o
+bootflags.d                        footer.o             menuindex.d                strtoull.o
+bootflags.o                        fps-engio.d          menuindex.o                strtoul.o
+boot-hack.d                        fps-engio.o          menu.o                     stubs.d
+boot-hack.o                        gcc-libgcc.a         ml-cbr.d                   stubs.o
+builtin-enforcing.d                greenscreen.d        ml-cbr.o                   stubs.S
+builtin-enforcing.o                greenscreen.o        ML-SETUP.FIR               tasks.d
+cfn.c                              gui.c                module.d                   tasks.o
+cfn.d                              gui-common.d         module.o                   tcc-glue.d
+cfn.o                              gui-common.o         movtweaks.d                tcc-glue.o
+chdk-dng.d                         gui.d                movtweaks.o                tskmon.d
+chdk-dng.o                         gui.h                newlib-libc.a              tskmon.o
+chdk-gui_draw.d                    gui.o                newlib-libm.a              tweaks.d
+chdk-gui_draw.o                    hdr.d                notify_box.d               tweaks-eyefi.d
+config.d                           hdr.o                notify_box.o               tweaks-eyefi.o
+config.o                           histogram.d          ph_info_disp.d             tweaks.o
+console.d                          histogram.o          ph_info_disp.o             util.d
+console.o                          ico.d                picstyle-noauto.d          util.o
+consts.h                           ico.o                picstyle-noauto.o          vectorscope.d
+crop-mode-hack.d                   imath.d              posix.d                    vectorscope.o
+crop-mode-hack.o                   imath.o              posix.o                    version.bin
+debug.d                            imgconv.d            powersave.d                version.c
+debug.o                            imgconv.o            powersave.o                version.d
+dialog_test.d                      [01;34minclude[0m              property.d                 version.o
+dialog_test.o                      internals.h          property.o                 vram.d
+dietlibc.a                         lcdsensor.d          propvalues.d               vram.o
+disp_direct.d                      lcdsensor.o          propvalues.o               vsync-lite.d
+disp_direct.o                      lens.d               rand.d                     vsync-lite.o
+edmac.d                            lens.o               rand.o                     zebra.d
+edmac-memcpy.d                     lib_a-memccpy.o      raw.d                      zebra.o
+edmac-memcpy.o                     lib_a-memcpy.o       raw.o                      [01;34mzip[0m
+edmac.o                            lib_a-memcpy-stub.o  rbf_font.d
+electronic_level.d                 lib_a-memmove.o      rbf_font.o
+whr0622@ubuntu:~/magiclantern/platform/500D.111$ cd zip
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip$ ls
+[0m[01;32mautoexec.bin[0m  [01;34mML[0m  ML-SETUP.FIR
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip$ cd ML/
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip/ML$ ls
+[0m[01;34mcropmks[0m  [01;34mdata[0m  [01;34mdoc[0m  [01;34mfonts[0m  [01;34mmodules[0m  [01;34mscripts[0m
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip/ML$ cd modules/
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip/ML/modules$ ls
+500D_111.sym
+whr0622@ubuntu:~/magiclantern/platform/500D.111/zip/ML/modules$ 
